@@ -1,0 +1,43 @@
+--create database bdvendas
+use bdvendas
+--create table tblproduto
+--(
+--CB int not null,
+--NomeProd varchar(255) not null,
+--ValorProd float not null,
+--constraint PKcb primary key (CB)
+--)
+--create table tblVendedor
+--(
+--Mat int not null,
+--NomeVend varchar(255) not null,
+--Sexo varchar(1) not null,
+--constraint PKMat primary key (Mat)
+--)
+--create table tblVendas
+--(
+--CodV int not null,
+--DataVenda date not null,
+--Mat int not null,
+--constraint PKCodV primary key(CodV),
+--constraint FKmat foreign key(Mat) references tblVendedor(Mat)
+--) 
+--create table tblVendidos
+--(
+--CodV int not null,
+--CB int not null,
+--Qtde int not null,
+--constraint PKVendidos primary key (CodV,CB),
+--constraint FKCodV foreign key(CodV) references tblVendas(CodV),
+--constraint FKCB foreign key(CB) references tblProduto(CB)
+--)
+--create table tblcategoria
+--(
+--Codcat int not null,
+--nomecat varchar(255) not null,
+--constraint PKCodcat primary key(Codcat)
+--)
+--alter table tblProduto add Codcat int not null
+--alter table tblProduto add constraint FKCodcat foreign key(Codcat) references tblcategoria(Codcat)
+--insert into tblcategoria values(1,'Software');
+--insert into tblcategoria values(2,'Hardware');
